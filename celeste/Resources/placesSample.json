@@ -1,31 +1,39 @@
 [
     {
-        "name": "Sushi Nakazawa",
-        "category": "eat",
-        "address": "23 Commerce St, New York, NY 10014, United States",
-        "location": {
-            "lat": 40.7318046,
-            "lng": -74.00454929999999
+        "placemark": {
+            "name": "Sushi Nakazawa",
+            "location": {
+                "coordinate": {
+                    "latitude": 40.7318046,
+                    "longitude": -74.00454929999999
+                }
+            }
         }
+        "category": "eat"
     },
     {
-        "name": "Verlaine",
-        "category": "drink",
-        "description": "Good lychee martinis",
-        "address": "110 Rivington St, New York, NY 10002, United States",
-        "location": {
-            "lat": 40.720079,
-            "lng": -73.987785
+        "placemark": {
+            "name": "Verlaine",
+            "location": {
+                "coordinate": {
+                    "latitude": 40.720079,
+                    "longitude": -73.987785
+                }
+            }
         }
+        "description": "Good lychee martinis"
+        "category": "drink"
     },
     {
-        "id": "ChIJEd2Si5tZwokRJ3qhO8DxZoQ",
-        "name": "Angel's Share",
-        "category": "drink",
-        "address": "8 Stuyvesant St, New York, NY 10003, United States",
-        "location": {
-            "lat": 40.7297544,
-            "lng": -73.9891624
+        "placemark": {
+            "name": "Angel's Share",
+            "location": {
+                "coordinate": {
+                    "latitude": 40.7297544,
+                    "longitude": -73.9891624
+                }
+            }
         }
+        "category": "drink"
     }
 ]
