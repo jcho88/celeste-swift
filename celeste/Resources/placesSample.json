@@ -2,6 +2,7 @@
     {
         "placemark": {
             "name": "Sushi Nakazawa",
+            "title": "Sushi Nakazawa",
             "location": {
                 "coordinate": {
                     "latitude": 40.7318046,
@@ -14,6 +15,7 @@
     {
         "placemark": {
             "name": "Verlaine",
+            "title": "Verlaine",
             "location": {
                 "coordinate": {
                     "latitude": 40.720079,
@@ -27,6 +29,7 @@
     {
         "placemark": {
             "name": "Angel's Share",
+            "title": "Angel's Share",
             "location": {
                 "coordinate": {
                     "latitude": 40.7297544,
