@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D80C7D027C436EE00BF113F /* places.json in Resources */ = {isa = PBXBuildFile; fileRef = 0D80C7CF27C436EE00BF113F /* places.json */; };
 		CB328A1B27C4317C00AB6E80 /* celesteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB328A1A27C4317C00AB6E80 /* celesteApp.swift */; };
 		CB328A1D27C4317C00AB6E80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB328A1C27C4317C00AB6E80 /* ContentView.swift */; };
 		CB328A1F27C4317D00AB6E80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB328A1E27C4317D00AB6E80 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D80C7CF27C436EE00BF113F /* places.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = places.json; path = ../../../places.json; sourceTree = "<group>"; };
 		CB328A1727C4317C00AB6E80 /* celeste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = celeste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB328A1A27C4317C00AB6E80 /* celesteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celesteApp.swift; sourceTree = "<group>"; };
 		CB328A1C27C4317C00AB6E80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		CB328A4627C4320100AB6E80 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0D80C7CF27C436EE00BF113F /* places.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D80C7D027C436EE00BF113F /* places.json in Resources */,
 				CB328A2227C4317D00AB6E80 /* Preview Assets.xcassets in Resources */,
 				CB328A1F27C4317D00AB6E80 /* Assets.xcassets in Resources */,
 			);
