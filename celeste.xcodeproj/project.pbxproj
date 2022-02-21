@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0DA5A20327C43E2400698A51 /* placesSample.json in Resources */ = {isa = PBXBuildFile; fileRef = 0DA5A20127C43E2400698A51 /* placesSample.json */; };
 		0DA5A20427C43E2400698A51 /* places.json in Resources */ = {isa = PBXBuildFile; fileRef = 0DA5A20227C43E2400698A51 /* places.json */; };
+		0DA5A20627C43FA500698A51 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA5A20527C43FA500698A51 /* Place.swift */; };
+		0DA5A20927C441BC00698A51 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA5A20827C441BC00698A51 /* LocationManager.swift */; };
 		CB328A1B27C4317C00AB6E80 /* celesteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB328A1A27C4317C00AB6E80 /* celesteApp.swift */; };
 		CB328A1D27C4317C00AB6E80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB328A1C27C4317C00AB6E80 /* ContentView.swift */; };
 		CB328A1F27C4317D00AB6E80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB328A1E27C4317D00AB6E80 /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 /* Begin PBXFileReference section */
 		0DA5A20127C43E2400698A51 /* placesSample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = placesSample.json; sourceTree = "<group>"; };
 		0DA5A20227C43E2400698A51 /* places.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = places.json; sourceTree = "<group>"; };
+		0DA5A20527C43FA500698A51 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		0DA5A20827C441BC00698A51 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		CB328A1727C4317C00AB6E80 /* celeste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = celeste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB328A1A27C4317C00AB6E80 /* celesteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celesteApp.swift; sourceTree = "<group>"; };
 		CB328A1C27C4317C00AB6E80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +89,7 @@
 		0DA5A1FA27C43B4300698A51 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0DA5A20527C43FA500698A51 /* Place.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -96,6 +101,14 @@
 				0DA5A20127C43E2400698A51 /* placesSample.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		0DA5A20727C441B000698A51 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0DA5A20827C441BC00698A51 /* LocationManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		CB328A0E27C4317C00AB6E80 = {
@@ -121,6 +134,7 @@
 		CB328A1927C4317C00AB6E80 /* celeste */ = {
 			isa = PBXGroup;
 			children = (
+				0DA5A20727C441B000698A51 /* Managers */,
 				0DA5A1FC27C43DCB00698A51 /* Resources */,
 				0DA5A1FA27C43B4300698A51 /* Models */,
 				0DA5A1F927C43B3D00698A51 /* Views */,
@@ -289,6 +303,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DA5A20927C441BC00698A51 /* LocationManager.swift in Sources */,
+				0DA5A20627C43FA500698A51 /* Place.swift in Sources */,
 				CB328A1D27C4317C00AB6E80 /* ContentView.swift in Sources */,
 				CB328A1B27C4317C00AB6E80 /* celesteApp.swift in Sources */,
 			);
