@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		449DBBF2ABB7BB78751C2A82 /* libPods-celeste.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 643A485AFC28ED554C6D2DC8 /* libPods-celeste.a */; };
-		CB2CB77A27C2E9AD00DF2091 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CB2CB77927C2E9AD00DF2091 /* Podfile */; };
 		CB3CE52B261A2D6C00808FBB /* LandmarkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CE52A261A2D6C00808FBB /* LandmarkRow.swift */; };
 		CB3CE530261A32C200808FBB /* LandmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CE52F261A32C200808FBB /* LandmarkList.swift */; };
 		CB3CE535261A355200808FBB /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3CE534261A355200808FBB /* LandmarkDetail.swift */; };
@@ -45,9 +44,6 @@
 
 /* Begin PBXFileReference section */
 		643A485AFC28ED554C6D2DC8 /* libPods-celeste.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-celeste.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7150E709B24BFCE4DA4BA135 /* Pods-celeste.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-celeste.debug.xcconfig"; path = "Target Support Files/Pods-celeste/Pods-celeste.debug.xcconfig"; sourceTree = "<group>"; };
-		B3228241DBBFE15A6CF1247F /* Pods-celeste.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-celeste.release.xcconfig"; path = "Target Support Files/Pods-celeste/Pods-celeste.release.xcconfig"; sourceTree = "<group>"; };
-		CB2CB77927C2E9AD00DF2091 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		CB3CE52A261A2D6C00808FBB /* LandmarkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkRow.swift; sourceTree = "<group>"; };
 		CB3CE52F261A32C200808FBB /* LandmarkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkList.swift; sourceTree = "<group>"; };
 		CB3CE534261A355200808FBB /* LandmarkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetail.swift; sourceTree = "<group>"; };
@@ -97,16 +93,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2FCDB327C99AD6F4906299B0 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7150E709B24BFCE4DA4BA135 /* Pods-celeste.debug.xcconfig */,
-				B3228241DBBFE15A6CF1247F /* Pods-celeste.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		300D7DB5EFF189D8F74F428C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,12 +124,10 @@
 		CB6D84EA25B6522900C3F6A3 = {
 			isa = PBXGroup;
 			children = (
-				CB2CB77927C2E9AD00DF2091 /* Podfile */,
 				CB6D84F525B6522900C3F6A3 /* celeste */,
 				CB6D850725B6522A00C3F6A3 /* celesteTests */,
 				CB6D851225B6522A00C3F6A3 /* celesteUITests */,
 				CB6D84F425B6522900C3F6A3 /* Products */,
-				2FCDB327C99AD6F4906299B0 /* Pods */,
 				300D7DB5EFF189D8F74F428C /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -332,7 +316,6 @@
 			files = (
 				CB6D84FE25B6522A00C3F6A3 /* Preview Assets.xcassets in Resources */,
 				CB6D84FB25B6522A00C3F6A3 /* Assets.xcassets in Resources */,
-				CB2CB77A27C2E9AD00DF2091 /* Podfile in Resources */,
 				CBCEFE6325D9FC4E001573ED /* landmarkData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,7 +546,6 @@
 		};
 		CB6D851925B6522A00C3F6A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7150E709B24BFCE4DA4BA135 /* Pods-celeste.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -585,7 +567,6 @@
 		};
 		CB6D851A25B6522A00C3F6A3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3228241DBBFE15A6CF1247F /* Pods-celeste.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
