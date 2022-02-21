@@ -8,34 +8,31 @@
 import Foundation
 import MapKit
 
-struct Place {
+struct Place: Codable {
     
-    let placemark: MKPlacemark
-    
-    var description: String = ""
-    var category: String = ""
+//    let placemark: MKPlacemark
     
     var id: UUID {
         return UUID()
     }
-    
-    var name: String {
-        self.placemark.name ?? ""
-    }
-    
-    var title: String {
-        self.placemark.title ?? ""
-    }
+    let name: String
+    let title: String
+    let description: String?
+    let category: String
+    let latitude: Double
+    let longitude: Double
     
     var coordinate: CLLocationCoordinate2D {
-        self.placemark.coordinate
+        return CLLocationCoordinate2D(latitude: self.latitude, longitude: self.longitude)
     }
-    
+        
     init(placemark: MKPlacemark, category: String, description: String?) {
-        self.placemark = placemark
         self.category = category
-        if description != nil {
-            self.description = description!
-        }
+        self.description = description ?? nil
+        self.name = placemark.name ?? ""
+        self.title = placemark.title ?? ""
+        self.latitude = placemark.coordinate.latitude
+        self.longitude = placemark.coordinate.longitude
     }
+
 }
