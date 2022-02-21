@@ -8,7 +8,7 @@
 import Foundation
 import MapKit
 
-struct Place: Codable {
+struct Place: Codable, Identifiable {
     
 //    let placemark: MKPlacemark
     

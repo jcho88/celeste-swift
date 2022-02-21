@@ -1,5 +1,5 @@
 //
-//  PlaceView.swift
+//  PlaceDetail.swift
 //  celeste
 //
 //  Created by Justin Cho on 2/21/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PlaceView: View {
+struct PlaceDetail: View {
     var body: some View {
         VStack {
             MapView()
@@ -44,8 +44,8 @@ struct PlaceView: View {
     }
 }
 
-struct PlaceView_Previews: PreviewProvider {
+struct PlaceDetail_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceView()
+        PlaceDetail()
     }
 }
