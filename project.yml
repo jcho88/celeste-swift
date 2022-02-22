@@ -1,0 +1,9 @@
+name: celeste
+options:
+    bundleIdPrefix: com.sj
+targets:
+    celeste:
+        type: application
+        platform: iOS
+        deploymentTarget: "15.0"
+        sources: [celeste]
