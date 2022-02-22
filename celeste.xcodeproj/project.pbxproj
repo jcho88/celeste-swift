@@ -12,7 +12,6 @@
 		0DA5A20627C43FA500698A51 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA5A20527C43FA500698A51 /* Place.swift */; };
 		0DA5A20927C441BC00698A51 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA5A20827C441BC00698A51 /* LocationManager.swift */; };
 		0DF909BA27C4566B0090D4BD /* PlaceInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF909B927C4566B0090D4BD /* PlaceInput.swift */; };
-		0DF909C327C479C20090D4BD /* places.json in Resources */ = {isa = PBXBuildFile; fileRef = 0DF909C227C479C20090D4BD /* places.json */; };
 		CB328A1B27C4317C00AB6E80 /* celesteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB328A1A27C4317C00AB6E80 /* celesteApp.swift */; };
 		CB328A1D27C4317C00AB6E80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB328A1C27C4317C00AB6E80 /* ContentView.swift */; };
 		CB328A1F27C4317D00AB6E80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB328A1E27C4317D00AB6E80 /* Assets.xcassets */; };
@@ -27,6 +26,7 @@
 		CB328A5227C4564D00AB6E80 /* PlacesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB328A5127C4564D00AB6E80 /* PlacesList.swift */; };
 		CB328A5427C4583900AB6E80 /* PlaceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB328A5327C4583900AB6E80 /* PlaceDetail.swift */; };
 		CB328A5627C46C8D00AB6E80 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB328A5527C46C8D00AB6E80 /* Business.swift */; };
+		CB328A5827C47ED200AB6E80 /* places.json in Resources */ = {isa = PBXBuildFile; fileRef = CB328A5727C47ED200AB6E80 /* places.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,6 @@
 		0DA5A20527C43FA500698A51 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		0DA5A20827C441BC00698A51 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		0DF909B927C4566B0090D4BD /* PlaceInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInput.swift; sourceTree = "<group>"; };
-		0DF909C227C479C20090D4BD /* places.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = places.json; path = ../../../places.json; sourceTree = "<group>"; };
 		CB328A1727C4317C00AB6E80 /* celeste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = celeste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB328A1A27C4317C00AB6E80 /* celesteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celesteApp.swift; sourceTree = "<group>"; };
 		CB328A1C27C4317C00AB6E80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,6 +69,7 @@
 		CB328A5127C4564D00AB6E80 /* PlacesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesList.swift; sourceTree = "<group>"; };
 		CB328A5327C4583900AB6E80 /* PlaceDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetail.swift; sourceTree = "<group>"; };
 		CB328A5527C46C8D00AB6E80 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
+		CB328A5727C47ED200AB6E80 /* places.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = places.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,9 +123,9 @@
 		0DA5A1FC27C43DCB00698A51 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0DF909C227C479C20090D4BD /* places.json */,
 				0DA5A20227C43E2400698A51 /* placesTest.json */,
 				0DA5A20127C43E2400698A51 /* placesSample.json */,
+				CB328A5727C47ED200AB6E80 /* places.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -304,7 +304,7 @@
 			files = (
 				CB328A2227C4317D00AB6E80 /* Preview Assets.xcassets in Resources */,
 				CB328A1F27C4317D00AB6E80 /* Assets.xcassets in Resources */,
-				0DF909C327C479C20090D4BD /* places.json in Resources */,
+				CB328A5827C47ED200AB6E80 /* places.json in Resources */,
 				0DA5A20327C43E2400698A51 /* placesSample.json in Resources */,
 				0DA5A20427C43E2400698A51 /* placesTest.json in Resources */,
 			);
