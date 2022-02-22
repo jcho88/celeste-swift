@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct PlaceDetail: View {
+    
+    var place: Place
+//    @State private var image = Image()
+    
     var body: some View {
-        VStack {
-            MapView()
+        ScrollView {
+            MapView(coordinate: place.coordinate)
                 .ignoresSafeArea(edges: .top)
                 .frame(height: 300)
             
@@ -19,33 +23,35 @@ struct PlaceDetail: View {
                 .padding(.bottom, -130)
             
             VStack(alignment: .leading) {
-                Text("Turtle Rock")
+                Text(place.name)
                     .font(.title)
                 HStack {
-                    Text("Joshua Tree National Park")
+                    Text(place.category)
                         .font(.subheadline)
                     Spacer()
-                    Text("California")
-                        .font(.subheadline)
+                    
                 }
                 .font(.subheadline)
                 .foregroundColor(.secondary)
                 
-                Divider()
-
-                Text("About Turtle Rock")
-                    .font(.title2)
-                Text("Descriptive text goes here.")
+                if(place.description != nil) {
+                    Divider()
+                    Text("About " + place.name)
+                        .font(.title2)
+                    Text(place.description ?? "")
+                        .font(.subheadline)
+                }
             }
             .padding()
             
             Spacer()
         }
     }
+
 }
 
 struct PlaceDetail_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceDetail()
+        PlaceDetail(place: placesSample[0])
     }
 }

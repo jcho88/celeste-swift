@@ -26,6 +26,7 @@
 		CB328A5027C44CF800AB6E80 /* PlacesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB328A4F27C44CF800AB6E80 /* PlacesRow.swift */; };
 		CB328A5227C4564D00AB6E80 /* PlacesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB328A5127C4564D00AB6E80 /* PlacesList.swift */; };
 		CB328A5427C4583900AB6E80 /* PlaceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB328A5327C4583900AB6E80 /* PlaceDetail.swift */; };
+		CB328A5627C46C8D00AB6E80 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB328A5527C46C8D00AB6E80 /* Business.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		CB328A4F27C44CF800AB6E80 /* PlacesRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesRow.swift; sourceTree = "<group>"; };
 		CB328A5127C4564D00AB6E80 /* PlacesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesList.swift; sourceTree = "<group>"; };
 		CB328A5327C4583900AB6E80 /* PlaceDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetail.swift; sourceTree = "<group>"; };
+		CB328A5527C46C8D00AB6E80 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				0DA5A20527C43FA500698A51 /* Place.swift */,
 				CB328A4D27C44C6500AB6E80 /* ModelData.swift */,
 				0DF909B927C4566B0090D4BD /* PlaceInput.swift */,
+				CB328A5527C46C8D00AB6E80 /* Business.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				CB328A1B27C4317C00AB6E80 /* celesteApp.swift in Sources */,
 				CB328A5027C44CF800AB6E80 /* PlacesRow.swift in Sources */,
 				CB328A4827C440F800AB6E80 /* CircleImage.swift in Sources */,
+				CB328A5627C46C8D00AB6E80 /* Business.swift in Sources */,
 				CB328A5227C4564D00AB6E80 /* PlacesList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
