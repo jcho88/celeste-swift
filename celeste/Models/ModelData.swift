@@ -7,7 +7,9 @@
 
 import Foundation
 
-var places: [Place] = load("placesSample.json")
+var placesSample: [Place] = load("placesSample.json")
+var placeInputs: [PlaceInput] = load("places.json")
+
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data

@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Dante NYC",
+        "category": "eat",
+        "description": "Italian food"
+    },
+    {
+        "name": "Sushi Nakazawa",
+        "category": "eat"
+    },
+    {
+        "name": "Verlaine",
+        "category": "drink",
+        "description": "Good lychee martinis"
+    }
+]
