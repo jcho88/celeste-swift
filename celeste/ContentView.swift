@@ -57,8 +57,16 @@ struct ContentView: View {
         }
     }
     
+    @State var businesses = Businesses()
+    
     var body: some View {
         PlacesList(places: places).onAppear(perform: getPlaces)
+        Text("Test")
+            .onAppear() {
+                YelpApi().getBusinessByName { (data) in
+                    self.businesses = data
+                }
+            }
     }
 }
 

@@ -14,7 +14,7 @@ struct PlacesList: View {
         NavigationView {
             List (places) { place in
                 NavigationLink {
-                    PlaceDetail()
+                    PlaceDetail(place: place)
                 } label: {
                     PlacesRow(place: place)
                 }
