@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct PlacesList: View {
+    let places: [Place]
     var body: some View {
         NavigationView {
             List (places) { place in
@@ -20,10 +22,12 @@ struct PlacesList: View {
             .navigationTitle("Places")
         }
     }
+    
+    
 }
 
 struct PlacesList_Previews: PreviewProvider {
     static var previews: some View {
-        PlacesList()
+        PlacesList(places: [Place(placemark: MKPlacemark(), placeInput: placeInputs[0])])
     }
 }

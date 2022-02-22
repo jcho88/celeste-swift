@@ -22,7 +22,7 @@ struct PlacesRow: View {
 
 struct PlacesRow_Previews: PreviewProvider {
     static var previews: some View {
-        PlacesRow(place: places[0])
+        PlacesRow(place: placesSample[0])
             .previewLayout(.fixed(width: 300, height: 70))
     }
 }

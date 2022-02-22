@@ -34,5 +34,14 @@ struct Place: Codable, Identifiable {
         self.latitude = placemark.coordinate.latitude
         self.longitude = placemark.coordinate.longitude
     }
+    
+    init(placemark: MKPlacemark, placeInput: PlaceInput) {
+        self.name = placeInput.name
+        self.title = placemark.title ?? ""
+        self.category = placeInput.category
+        self.description = placeInput.description ?? nil
+        self.latitude = placemark.coordinate.latitude
+        self.longitude = placemark.coordinate.longitude
+    }
 
 }
