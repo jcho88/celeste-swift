@@ -36,7 +36,7 @@ struct Place: Codable, Identifiable {
     }
     
     init(placemark: MKPlacemark, placeInput: PlaceInput) {
-        self.name = placeInput.name
+        self.name = placemark.name ?? placeInput.name
         self.title = placemark.title ?? ""
         self.category = placeInput.category
         self.description = placeInput.description ?? nil
