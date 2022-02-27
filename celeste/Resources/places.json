@@ -36,7 +36,7 @@
         "category": "eat"
     },
     {
-        "name": "Starbucks Reserve Roastery New York",
+        "name": "Starbucks Reserve Roastery Ninth Ave",
         "category": "coffee"
     },
     {
@@ -44,7 +44,7 @@
         "category": "drink"
     },
     {
-        "name": "Empanada Mama Hell's Kitchen",
+        "name": "Empanada Mama",
         "category": "eat",
         "description": "MUST GO"
     },
@@ -125,12 +125,12 @@
         "description": "Great views"
     },
     {
-        "name": "Robert NYC",
+        "name": "Robert Restaurant NYC",
         "category": "eat",
         "description": "Fancy views of Central Park"
     },
     {
-        "name": "Little Island",
+        "name": "Little Island Pier",
         "category": "sightsee",
         "description": "Manmade park on West Side"
     }

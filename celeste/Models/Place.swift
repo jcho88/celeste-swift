@@ -25,6 +25,21 @@ struct Place: Codable, Identifiable {
     var coordinate: CLLocationCoordinate2D {
         return CLLocationCoordinate2D(latitude: self.latitude, longitude: self.longitude)
     }
+    
+    var iconName: String {
+        switch category {
+        case "eat":
+            return "fork.knife"
+        case "drink":
+            return "d.circle"
+        case "coffee":
+            return "cup.and.saucer"
+        case "sightsee":
+            return "binoculars"
+        default:
+            return "heart"
+        }
+    }
         
     init(placemark: MKPlacemark, category: String, description: String?) {
         self.category = category
