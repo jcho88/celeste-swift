@@ -9,7 +9,7 @@ import SwiftUI
 import MapKit
 
 struct ContentView: View {
-    @ObservedObject var locationManager = LocationManager()
+//    @ObservedObject var locationManager = LocationManager()
     @State private var places: [Place] = [Place]()
     @State private var tapped: Bool = false
     @State var businesses = Businesses()
@@ -42,8 +42,9 @@ struct ContentView: View {
         // Center around NYC
         request.region = MKCoordinateRegion(
             center: CLLocationCoordinate2D(latitude: 40.75251018277572, longitude: -73.97984077693457),
-            span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+            span: MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3)
         )
+        request.resultTypes = .pointOfInterest
         
         let search = MKLocalSearch(request: request)
         search.start { (response, error) in
@@ -67,7 +68,7 @@ struct ContentView: View {
             return UIScreen.main.bounds.size.height - UIScreen.main.bounds.size.height / 4
         }
         else if self.tapped {
-            return 10
+            return 0
         } else {
             return UIScreen.main.bounds.size.height
         }
@@ -75,6 +76,7 @@ struct ContentView: View {
     
     var body: some View {
         ZStack(alignment: .top) {
+            
             MainMapView(places: places).onAppear(perform: getPlaces)
             PlacesList(places: places) {
                 // on tap

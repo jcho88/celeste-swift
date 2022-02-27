@@ -35,20 +35,6 @@ struct PlacesList: View {
             }
         }.cornerRadius(10)
     }
-//    var body: some View {
-//        NavigationView {
-//            List (places) { place in
-//                NavigationLink {
-//                    PlaceDetail(place: place)
-//                } label: {
-//                    PlacesRow(place: place)
-//                }
-//            }
-//            .navigationTitle("Places")
-//        }
-//    }
-//
-    
 }
 
 struct PlacesList_Previews: PreviewProvider {
