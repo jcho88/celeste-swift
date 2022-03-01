@@ -6,15 +6,18 @@
     },
     {
         "name": "Sushi Nakazawa",
+        "date": "2022-03-08",
         "category": "eat"
     },
     {
         "name": "Verlaine",
         "category": "drink",
+        "date": "2022-03-05",
         "description": "Good lychee martinis"
     },
     {
         "name": "Angel's Share",
+        "date": "2022-03-05",
         "category": "drink"
     },
     {
@@ -24,11 +27,13 @@
     },
     {
         "name": "Sushi By Bou",
+        "date": "2022-03-03",
         "category": "eat"
     },
     {
         "name": "Ruby's Cafe",
         "category": "eat",
+        "date": "2022-03-05",
         "description": "Good pasta"
     },
     {
@@ -37,10 +42,12 @@
     },
     {
         "name": "Starbucks Reserve Roastery Ninth Ave",
+        "date": "2022-03-07",
         "category": "coffee"
     },
     {
         "name": "Cull & Pistol",
+        "date": "2022-03-08",
         "category": "drink"
     },
     {
@@ -51,26 +58,31 @@
     {
         "name": "Pocha 32",
         "category": "drink",
+        "date": "2022-03-06",
         "description": "Ktown staple"
     },
     {
         "name": "Please Don't Tell",
         "category": "drink",
+        "date": "2022-03-05",
         "description": "Speakeasy, entrance is a phone booth"
     },
     {
         "name": "Patent Pending",
         "category": "drink",
+        "date": "2022-03-06",
         "description": "Speakeasy"
     },
     {
         "name": "Apotheke",
         "category": "drink",
+        "date": "2022-03-04",
         "description": "Speakeasy"
     },
     {
         "name": "Basement",
         "category": "drink",
+        "date": "2022-03-04",
         "description": "Can get crazy, speakeasy, entrance is a Coke fridge"
     },
     {
@@ -83,11 +95,13 @@
     },
     {
         "name": "Wayla",
-        "category": "eat"
+        "category": "eat",
+        "description": "Thai food"
     },
     {
         "name": "Frying Pan",
         "category": "drink",
+        "date": "2022-03-07",
         "description": "Outdoor bar area"
     },
     {
@@ -98,6 +112,7 @@
     {
         "name": "Levaine",
         "category": "eat",
+        "date": "2022-03-06",
         "description": "Cookies"
     },
     {
@@ -108,6 +123,7 @@
     {
         "name": "Prince Tea House",
         "category": "coffee",
+        "date": "2022-03-05",
         "description": "Cute afternoon tea, great lavender milk tea"
     },
     {
@@ -122,6 +138,7 @@
     {
         "name": "The Skylark",
         "category": "drink",
+        "date": "2022-03-03",
         "description": "Great views"
     },
     {
@@ -132,6 +149,154 @@
     {
         "name": "Little Island Pier",
         "category": "sightsee",
+        "date": "2022-03-07",
         "description": "Manmade park on West Side"
+    },
+    {
+        "name": "Central Park",
+        "category": "sightsee"
+    },
+    {
+        "name": "The Metropolitan Museum of Art",
+        "date": "2022-03-06",
+        "category": "sightsee"
+    },
+    {
+        "name": "Raku",
+        "category": "eat",
+        "date": "2022-03-04",
+        "description": "Niku udon"
+    },
+    {
+        "name": "Ichiran",
+        "category": "eat",
+        "date": "2022-03-06",
+        "description": "ramen"
+    },
+    {
+        "name": "Ess a Bagel",
+        "category": "eat",
+        "date": "2022-03-06",
+        "description": "Get the lox and cream cheese on everything bagel"
+    },
+    {
+        "name": "Rubirosa",
+        "category": "eat",
+        "description": "Tie-dye pizza"
+    },
+    {
+        "name": "Mala Project",
+        "category": "eat",
+        "date": "2022-03-05",
+        "description": "Make your own dry pot"
+    },
+    {
+        "name": "Rubirosa",
+        "category": "eat",
+        "description": "Tie-dye pizza"
+    },
+    {
+        "name": "Clinton St Baking Company",
+        "category": "eat",
+        "description": "Pancakes"
+    },
+    {
+        "name": "Olio e Piu",
+        "category": "eat",
+        "date": "2022-03-06",
+        "description": "RESERVATION AT 5:45. Get the carbonara"
+    },
+    {
+        "name": "Pig and Khao",
+        "category": "eat",
+        "description": "Khao Soi"
+    },
+    {
+        "name": "Thai Villa",
+        "category": "eat"
+    },
+    {
+        "name": "Wayan",
+        "category": "eat",
+        "date": "2022-03-05",
+        "description": "RESERVATION AT 11:30AM. Lobster noodles, duck"
+    },
+    {
+        "name": "Oiji",
+        "category": "eat",
+        "description": "Long island duckling"
+    },
+    {
+        "name": "Club A Steakhouse",
+        "category": "eat",
+        "description": "Steak"
+    },
+    {
+        "name": "Peak",
+        "category": "eat",
+        "date": "2022-03-07",
+        "description": "Lobster bolognese, free entrance to the edge"
+    },
+    {
+        "name": "Cote",
+        "category": "eat",
+        "description": "Expensive af. Butchers feast"
+    },
+    {
+        "name": "Carbone",
+        "category": "eat",
+        "description": "Spicy rigatoni pasta"
+    },
+    {
+        "name": "Soju Haus",
+        "date": "2022-03-06",
+        "category": "drink"
+    },
+    {
+        "name": "Take 31",
+        "category": "drink",
+        "date": "2022-03-06",
+        "description": "Korean"
+    },
+    {
+        "name": "Attaboy",
+        "category": "drink",
+        "date": "2022-03-05",
+        "description": "cocktails"
+    },
+    {
+        "name": "Thyme Bar Koreatown",
+        "category": "drink",
+        "date": "2022-03-06",
+        "description": "cocktails"
+    },
+    {
+        "name": "Oscar wilde 27th st",
+        "category": "drink",
+        "date": "2022-03-06",
+        "description": "cocktails"
+    },
+    {
+        "name": "Red Hook Food Corp",
+        "category": "eat",
+        "description": "Weird tiktok sandwiches"
+    },
+    {
+        "name": "Comedy Cellar Macdougal",
+        "category": "sightsee",
+        "date": "2022-03-04",
+        "description": "Comedy club"
+    },
+    {
+        "name": "The Vessel",
+        "category": "sightsee",
+        "date": "2022-03-07",
+        "description": "cool library thing?"
+    },
+    {
+        "name": "The High Line",
+        "category": "sightsee",
+        "date": "2022-03-07",
+        "description": "cool outdoor park thing"
     }
 ]
