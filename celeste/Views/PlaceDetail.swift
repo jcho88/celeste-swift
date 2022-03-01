@@ -10,6 +10,8 @@ import SwiftUI
 struct PlaceDetail: View {
     
     var place: Place
+    @State private var date: Date = Date();
+    let dateFormatter = DateFormatter();
 //    @State private var image = Image()
     
     var body: some View {
@@ -29,7 +31,13 @@ struct PlaceDetail: View {
                     Text(place.category)
                         .font(.subheadline)
                     Spacer()
-                    
+                    DatePicker("",
+                               selection: $date,
+                        displayedComponents: [.date])
+                        .labelsHidden()
+//                        .onChange(of: date, perform: { value in
+//                            self.testDate.date = value
+//                        })
                 }
                 .font(.subheadline)
                 .foregroundColor(.secondary)

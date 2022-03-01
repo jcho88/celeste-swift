@@ -11,8 +11,7 @@ import MapKit
 
 struct MainMapView: View {
     let places: [Place]
-    @State private var region = MKCoordinateRegion()
-    var regionNYC: MKCoordinateRegion = MKCoordinateRegion(
+    @State private var region: MKCoordinateRegion = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 40.75251018277572, longitude: -73.97984077693457),
         span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.2)
     )
@@ -27,9 +26,7 @@ struct MainMapView: View {
                         PlaceAnnotationView(place: place)
                     }
                 }
-            }.onAppear {
-                region = regionNYC
-            }
+            }.ignoresSafeArea(edges: .top)
         }
     }
 }

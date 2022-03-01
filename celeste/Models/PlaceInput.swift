@@ -10,6 +10,7 @@ import MapKit
 
 struct PlaceInput: Codable {
     let name: String
-    let description: String?
     let category: String
+    let description: String?
+    let date: String?
 }

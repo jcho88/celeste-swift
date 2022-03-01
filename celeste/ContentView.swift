@@ -9,10 +9,29 @@ import SwiftUI
 import MapKit
 
 struct ContentView: View {
-//    @ObservedObject var locationManager = LocationManager()
+    //    @ObservedObject var locationManager = LocationManager()
     @State private var places: [Place] = [Place]()
     @State private var tapped: Bool = false
     @State var businesses = Businesses()
+    
+    let dateFormatter = DateFormatter()
+    
+    @State var category = "none"
+    @State var date = Date()
+    
+    var categories = ["none", "eat", "drink", "coffee", "sightsee"]
+    
+    init() {
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+    }
+    
+    var filteredPlaces: [Place] {
+        places.filter { place in
+            ((category == "none" || category == place.category) && (place.date != ""
+                                                                    && Calendar.current.isDate(date, equalTo: dateFormatter.date(from: place.date)!, toGranularity: Calendar.Component.day))
+            )
+        }
+    }
     
     func getPlaces() {
         for placeInput in placeInputs {
@@ -56,8 +75,8 @@ struct ContentView: View {
             let mapItems = response.mapItems
             //            print("Found mapItems: ", mapItems)
             if mapItems.count > 1 {
-//                print("Found more than 1 search result for \(searchTerm), using first in list for now.")
-//                print("Full list: ", mapItems)
+                //                print("Found more than 1 search result for \(searchTerm), using first in list for now.")
+                //                print("Full list: ", mapItems)
             }
             completion(.success(mapItems[0].placemark))
         }
@@ -75,20 +94,53 @@ struct ContentView: View {
     }
     
     var body: some View {
-        ZStack(alignment: .top) {
+        VStack {
+            HStack {
+                Text("Filter by category")
+                Spacer()
+                Picker(selection: $category, label: Text("Categories")) {
+                    ForEach(categories, id: \.self) { category in
+                        Text(category)
+                    }
+                }
+            }
+            .padding([.horizontal])
             
-            MainMapView(places: places).onAppear(perform: getPlaces)
-            PlacesList(places: places) {
-                // on tap
-                self.tapped.toggle()
-            }.animation(Animation.spring(), value: self.tapped).offset(y: calculateOffset())
-            //            Text("Test")
-            //                .onAppear() {
-            //                    YelpApi().getBusinessByName { (data) in
-            //                        self.businesses = data
-            //                    }
-            //                }
+            HStack {
+                Text("Filter by date")
+                Spacer()
+                DatePicker("", selection: $date, displayedComponents: [.date])
+            }
+            .padding([.horizontal])
             
+            HStack {
+                EmptyView()
+            }.frame(width: UIScreen.main.bounds.size.width, height: 30)
+                .background(Color.gray)
+                .contentShape(Rectangle())
+                .gesture(TapGesture()
+                            .onEnded {
+                    self.tapped.toggle()
+                }
+                )
+            
+            ZStack(alignment: .top) {
+                
+                MainMapView(places: filteredPlaces).onAppear(perform: getPlaces)
+                VStack {
+                    PlacesList(places: filteredPlaces) {
+                        // on tap
+                        self.tapped.toggle()
+                    }.animation(Animation.spring(), value: self.tapped).offset(y: calculateOffset())
+                }
+                //            Text("Test")
+                //                .onAppear() {
+                //                    YelpApi().getBusinessByName { (data) in
+                //                        self.businesses = data
+                //                    }
+                //                }
+                
+            }
         }
         
     }
