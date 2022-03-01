@@ -8,7 +8,7 @@
 import Foundation
 import MapKit
 
-struct Place: Codable, Identifiable {
+class Place: ObservableObject, Codable, Identifiable {
     
 //    let placemark: MKPlacemark
     
@@ -21,6 +21,41 @@ struct Place: Codable, Identifiable {
     let category: String
     let latitude: Double
     let longitude: Double
+//    @Published var date: Date = Date()
+    let date: String
+    
+    enum CodingKeys: CodingKey {
+        case name
+        case title
+        case description
+        case category
+        case latitude
+        case longitude
+        case date
+    }
+
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        name = try container.decode(String.self, forKey: .name)
+        title = try container.decode(String.self, forKey: .title)
+        description = try container.decode(String.self, forKey: .description)
+        category = try container.decode(String.self, forKey: .category)
+        latitude = try container.decode(Double.self, forKey: .latitude)
+        longitude = try container.decode(Double.self, forKey: .longitude)
+//        date = try container.decode(Date.self, forKey: .date)
+        date = try container.decode(String.self, forKey: .date)
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(name, forKey: .name)
+        try container.encode(title, forKey: .title)
+        try container.encode(description, forKey: .description)
+        try container.encode(category, forKey: .category)
+        try container.encode(latitude, forKey: .latitude)
+        try container.encode(longitude, forKey: .longitude)
+        try container.encode(date, forKey: .date)
+    }
     
     var coordinate: CLLocationCoordinate2D {
         return CLLocationCoordinate2D(latitude: self.latitude, longitude: self.longitude)
@@ -40,15 +75,6 @@ struct Place: Codable, Identifiable {
             return "heart"
         }
     }
-        
-    init(placemark: MKPlacemark, category: String, description: String?) {
-        self.category = category
-        self.description = description ?? nil
-        self.name = placemark.name ?? ""
-        self.title = placemark.title ?? ""
-        self.latitude = placemark.coordinate.latitude
-        self.longitude = placemark.coordinate.longitude
-    }
     
     init(placemark: MKPlacemark, placeInput: PlaceInput) {
         self.name = placemark.name ?? placeInput.name
@@ -57,6 +83,7 @@ struct Place: Codable, Identifiable {
         self.description = placeInput.description ?? nil
         self.latitude = placemark.coordinate.latitude
         self.longitude = placemark.coordinate.longitude
+        self.date = placeInput.date ?? ""
     }
 
 }
