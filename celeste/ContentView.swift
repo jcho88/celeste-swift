@@ -12,7 +12,6 @@ struct ContentView: View {
     //    @ObservedObject var locationManager = LocationManager()
     @State private var places: [Place] = [Place]()
     @State private var tapped: Bool = false
-    @State var businesses = Businesses()
     
     let dateFormatter = DateFormatter()
     
@@ -151,13 +150,6 @@ struct ContentView: View {
                         self.tapped.toggle()
                     }.animation(Animation.spring(), value: self.tapped).offset(y: calculateOffset())
                 }
-                //            Text("Test")
-                //                .onAppear() {
-                //                    YelpApi().getBusinessByName { (data) in
-                //                        self.businesses = data
-                //                    }
-                //                }
-                
             }
         }
         

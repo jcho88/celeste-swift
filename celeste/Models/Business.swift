@@ -11,20 +11,23 @@ struct Businesses: Codable {
     var businesses = [Business]()
 }
 
-struct Business: Codable {
+struct Business: Codable, Identifiable {
     
     var id: String
     var alias: String
     var name: String
+    var image_url: String
+    var location: BusinessLocation
     
 }
 
 class YelpApi: ObservableObject {
     @Published var businesses = Businesses()
     
-    func getBusinessByName(completion:@escaping (Businesses) -> ()) {
+    func getBusinessByName(name: String, latitude: Double, longitude: Double, completion:@escaping (Businesses) -> ()) {
+        let encodedName = name.replacingOccurrences(of: " ", with: "%20")
         
-        guard let url = URL(string: "https://api.yelp.com/v3/businesses/matches?name=Sushi%20Nakazawa&address1=23%20Commerce%20St%20New%20York,%20NY%2010014&city=New%20York&state=NY&country=US") else {
+        guard let url = URL(string: "https://api.yelp.com/v3/businesses/search?term=\(String(describing: encodedName))&latitude=\(String(format: "%.1f", latitude))&longitude=\(String(format: "%.1f", longitude))&limit=1") else {
             print("Invalid url")
             return
         }
@@ -35,7 +38,7 @@ class YelpApi: ObservableObject {
         URLSession.shared.dataTask(with: urlRequest) {
             data, response, error in
             let businesses = try! JSONDecoder().decode(Businesses.self, from: data!)
-            print(businesses)
+            print(businesses.businesses)
             DispatchQueue.main.async {
                 completion(businesses)
             }

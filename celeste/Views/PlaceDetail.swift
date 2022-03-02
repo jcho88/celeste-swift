@@ -10,9 +10,9 @@ import SwiftUI
 struct PlaceDetail: View {
     
     var place: Place
-//    @State private var date: Date = Date();
-//    let dateFormatter = DateFormatter();
-//    @State private var image = Image()
+    @State var businesses = Businesses()
+    @State var address = [String]()
+    @State var imageUrl = String()
     
     var body: some View {
         ScrollView {
@@ -20,13 +20,30 @@ struct PlaceDetail: View {
                 .ignoresSafeArea(edges: .top)
                 .frame(height: 300)
             
-            CircleImage()
-                .offset(y: -130)
-                .padding(.bottom, -130)
+            AsyncImage(url: URL(string: imageUrl)) { image in
+                image.resizable()
+                .clipShape(Circle())
+                .overlay {
+                    Circle().stroke(.white, lineWidth: 4)
+                }
+                .shadow(radius: 7)
+                
+                
+            } placeholder: {
+                ProgressView()
+            }
+            .frame(width: 250, height: 250)
+            .offset(y: -130)
             
-            VStack(alignment: .leading) {
+            VStack() {
                 Text(place.name)
                     .font(.title)
+                    .padding([.bottom])
+                
+                ForEach(address, id: \.self) { add in
+                    Text(add)
+                }
+                
                 HStack {
                     Text(place.category)
                         .font(.subheadline)
@@ -35,7 +52,12 @@ struct PlaceDetail: View {
                 }
                 .font(.subheadline)
                 .foregroundColor(.secondary)
-                
+                .padding([.top])
+            }
+            .padding()
+            .offset(y: -130)
+            
+            VStack(alignment: .leading) {
                 if(place.description != "") {
                     Divider()
                     Text("About " + place.name)
@@ -45,8 +67,14 @@ struct PlaceDetail: View {
                 }
             }
             .padding()
-            
-            Spacer()
+            .offset(y: -130)
+        }
+        .onAppear() {
+            YelpApi().getBusinessByName(name: place.name, latitude: place.latitude, longitude: place.longitude) { (data) in
+                self.businesses = data
+                address = businesses.businesses[0].location.display_address
+                imageUrl = businesses.businesses[0].image_url
+            }
         }
     }
 
