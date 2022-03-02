@@ -30,6 +30,8 @@ struct PlacesList: View {
 struct PlacesList_Previews: PreviewProvider {
     static var previews: some View {
         PlacesList(places: [Place(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0)), placeInput: placeInputs[0]),
-                            Place(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0)), placeInput: placeInputs[1])], onTap: {} )
+                            Place(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0)), placeInput: placeInputs[1]),
+                            Place(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0)), placeInput: placeInputs[3]),
+                            Place(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0)), placeInput: placeInputs[4])], onTap: {} )
     }
 }

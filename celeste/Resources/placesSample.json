@@ -5,7 +5,9 @@
         "title": "Sushi Nakazawa",
         "latitude": 40.7318046,
         "longitude": -74.00454929999999,
-        "category": "eat"
+        "description": "Need reservations",
+        "category": "eat",
+        "date": "2022-03-08"
     },
     {
         "id": 2,
@@ -14,7 +16,8 @@
         "latitude": 40.720079,
         "longitude": -73.987785,
         "description": "Good lychee martinis",
-        "category": "drink"
+        "category": "drink",
+        "date": "2022-03-08"
     },
     {
         "id": 3,
@@ -22,6 +25,8 @@
         "title": "Angel's Share",
         "latitude": 40.7297544,
         "longitude": -73.9891624,
-        "category": "drink"
+        "description": "Not sure",
+        "category": "drink",
+        "date": "2022-03-08"
     }
 ]

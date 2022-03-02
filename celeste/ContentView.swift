@@ -16,6 +16,8 @@ struct ContentView: View {
     
     let dateFormatter = DateFormatter()
     
+    @State private var filterByCategory = false
+    @State private var filterByDate = false
     @State var category = "none"
     @State var date = Date()
     
@@ -27,8 +29,8 @@ struct ContentView: View {
     
     var filteredPlaces: [Place] {
         places.filter { place in
-            ((category == "none" || category == place.category) && (place.date != ""
-                                                                    && Calendar.current.isDate(date, equalTo: dateFormatter.date(from: place.date)!, toGranularity: Calendar.Component.day))
+            (
+                (!filterByCategory || category == place.category) && (!filterByDate || place.date != "" && Calendar.current.isDate(date, equalTo: dateFormatter.date(from: place.date)!, toGranularity: Calendar.Component.day))
             )
         }
     }
@@ -95,21 +97,37 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Text("Filter by category")
-                Spacer()
-                Picker(selection: $category, label: Text("Categories")) {
-                    ForEach(categories, id: \.self) { category in
-                        Text(category)
+            VStack {
+                Toggle(isOn: $filterByCategory) {
+                    Text("Filter by category")
+                }
+                if(filterByCategory) {
+                    HStack {
+                        Text("Category")
+                        Spacer()
+                        Picker(selection: $category, label: Text("Categories")) {
+                            ForEach(categories, id: \.self) { category in
+                                Text(category)
+                            }
+                        }
                     }
+                    .padding([.leading])
                 }
             }
             .padding([.horizontal])
             
-            HStack {
-                Text("Filter by date")
-                Spacer()
-                DatePicker("", selection: $date, displayedComponents: [.date])
+            VStack {
+                Toggle(isOn: $filterByDate) {
+                    Text("Filter by date")
+                }
+                if(filterByDate) {
+                    HStack {
+                        Text("Date")
+                        Spacer()
+                        DatePicker("", selection: $date, displayedComponents: [.date])
+                    }
+                    .padding([.leading])
+                }
             }
             .padding([.horizontal])
             
