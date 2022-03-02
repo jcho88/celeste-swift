@@ -7,6 +7,7 @@
 
 import Foundation
 import MapKit
+import SwiftUI
 
 class Place: ObservableObject, Codable, Identifiable {
     
@@ -71,8 +72,27 @@ class Place: ObservableObject, Codable, Identifiable {
             return "cup.and.saucer"
         case "sightsee":
             return "binoculars"
+        case "hotel":
+            return "building"
         default:
             return "heart"
+        }
+    }
+    
+    var iconColor: Color {
+        switch category {
+        case "eat":
+            return Color(red: 0.63, green: 0.15, blue: 0.02)
+        case "drink":
+            return Color(red: 0.40, green: 0.60, blue: 0.38)
+        case "coffee":
+            return Color(red: 0.38, green: 0.20, blue: 0.09)
+        case "sightsee":
+            return Color(red: 0.58, green: 0.63, blue: 0.76)
+        case "hotel":
+            return Color(red: 0.16, green: 0.25, blue: 0.29)
+        default:
+            return Color.black
         }
     }
     

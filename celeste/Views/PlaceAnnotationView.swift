@@ -14,7 +14,7 @@ struct PlaceAnnotationView: View {
     var body: some View {
         HStack(alignment: .bottom) {
             Image(systemName: place.iconName).symbolVariant(.fill)
-                .foregroundColor(Color.red)
+                .foregroundColor(place.iconColor)
             Text(place.name).dynamicTypeSize(SwiftUI.DynamicTypeSize.xSmall).foregroundColor(Color.black)
         }.padding(5)
             .background(Color.white)

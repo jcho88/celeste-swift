@@ -1,5 +1,18 @@
 [
     {
+        "id": 57,
+        "name": "The Manhattan at Times Square Hotel 7th ave",
+        "date": "2022-03-03",
+        "category": "hotel"
+    },
+    {
+        "id": 58,
+        "name": "Halal Guys 6th ave",
+        "date": "2022-03-03",
+        "category": "eat",
+        "description": "ORIGINAL HALAL GUYS"
+    },
+    {
         "id": 1,
         "name": "Dante NYC",
         "category": "eat",
@@ -25,15 +38,8 @@
         "category": "drink"
     },
     {
-        "id": 5,
-        "name": "HYUN",
-        "category": "eat",
-        "description": "AYCE wagyu"
-    },
-    {
         "id": 6,
         "name": "Sushi By Bou",
-        "date": "2022-03-03",
         "category": "eat"
     },
     {
@@ -270,29 +276,11 @@
         "description": "Long island duckling"
     },
     {
-        "id": 44,
-        "name": "Club A Steakhouse",
-        "category": "eat",
-        "description": "Steak"
-    },
-    {
         "id": 45,
         "name": "Peak",
         "category": "eat",
         "date": "2022-03-07",
         "description": "Lobster bolognese, free entrance to the edge"
-    },
-    {
-        "id": 46,
-        "name": "Cote",
-        "category": "eat",
-        "description": "Expensive af. Butchers feast"
-    },
-    {
-        "id": 47,
-        "name": "Carbone",
-        "category": "eat",
-        "description": "Spicy rigatoni pasta"
     },
     {
         "id": 48,
@@ -354,5 +342,29 @@
         "category": "sightsee",
         "date": "2022-03-07",
         "description": "cool outdoor park thing"
+    },
+    {
+        "id": 44,
+        "name": "Club A Steakhouse",
+        "category": "eat",
+        "description": "Steak"
+    },
+    {
+        "id": 46,
+        "name": "Cote",
+        "category": "eat",
+        "description": "Expensive af. Butchers feast"
+    },
+    {
+        "id": 47,
+        "name": "Carbone",
+        "category": "eat",
+        "description": "Spicy rigatoni pasta"
+    },
+    {
+        "id": 5,
+        "name": "HYUN",
+        "category": "eat",
+        "description": "AYCE wagyu"
     }
 ]
