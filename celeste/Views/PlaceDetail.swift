@@ -10,8 +10,8 @@ import SwiftUI
 struct PlaceDetail: View {
     
     var place: Place
-    @State private var date: Date = Date();
-    let dateFormatter = DateFormatter();
+//    @State private var date: Date = Date();
+//    let dateFormatter = DateFormatter();
 //    @State private var image = Image()
     
     var body: some View {
@@ -31,22 +31,16 @@ struct PlaceDetail: View {
                     Text(place.category)
                         .font(.subheadline)
                     Spacer()
-                    DatePicker("",
-                               selection: $date,
-                        displayedComponents: [.date])
-                        .labelsHidden()
-//                        .onChange(of: date, perform: { value in
-//                            self.testDate.date = value
-//                        })
+                    Text(place.date)
                 }
                 .font(.subheadline)
                 .foregroundColor(.secondary)
                 
-                if(place.description != nil) {
+                if(place.description != "") {
                     Divider()
                     Text("About " + place.name)
                         .font(.title2)
-                    Text(place.description ?? "")
+                    Text(place.description)
                         .font(.subheadline)
                 }
             }

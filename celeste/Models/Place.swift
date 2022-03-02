@@ -17,7 +17,7 @@ class Place: ObservableObject, Codable, Identifiable {
     }
     let name: String
     let title: String
-    let description: String?
+    let description: String
     let category: String
     let latitude: Double
     let longitude: Double
@@ -80,7 +80,7 @@ class Place: ObservableObject, Codable, Identifiable {
         self.name = placemark.name ?? placeInput.name
         self.title = placemark.title ?? ""
         self.category = placeInput.category
-        self.description = placeInput.description ?? nil
+        self.description = placeInput.description ?? ""
         self.latitude = placemark.coordinate.latitude
         self.longitude = placemark.coordinate.longitude
         self.date = placeInput.date ?? ""
