@@ -10,15 +10,12 @@ import SwiftUI
 import MapKit
 
 struct MainMapView: View {
+    @StateObject var locationManager = LocationManager()
     let places: [Place]
-    @State private var region: MKCoordinateRegion = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 40.75251018277572, longitude: -73.97984077693457),
-        span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.2)
-    )
     
     var body: some View {
         NavigationView {
-            Map(coordinateRegion: $region, annotationItems: places) {
+            Map(coordinateRegion: $locationManager.region, showsUserLocation: true, annotationItems: places) {
                 place in MapAnnotation(coordinate: place.coordinate) {
                     NavigationLink {
                         PlaceDetail(place: place)
@@ -26,7 +23,9 @@ struct MainMapView: View {
                         PlaceAnnotationView(place: place)
                     }
                 }
-            }.ignoresSafeArea(edges: .top)
+            }.ignoresSafeArea(edges: .top).onAppear {
+                locationManager.checkIfLocationServicesIsEnabled()
+            }
         }
     }
 }

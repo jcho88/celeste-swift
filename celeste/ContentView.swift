@@ -9,7 +9,6 @@ import SwiftUI
 import MapKit
 
 struct ContentView: View {
-    //    @ObservedObject var locationManager = LocationManager()
     @State private var places: [Place] = [Place]()
     @State private var tapped: Bool = false
     
@@ -20,7 +19,7 @@ struct ContentView: View {
     @State var category = "none"
     @State var date = Date()
     
-    var categories = ["none", "eat", "drink", "coffee", "sightsee"]
+    var categories = ["none", "eat", "drink", "coffee", "sightsee", "hotel"]
     
     init() {
         dateFormatter.dateFormat = "yyyy-MM-dd"
@@ -58,7 +57,7 @@ struct ContentView: View {
         let searchTerm = name + " New York NYC" // forcing search to include NYC
         request.naturalLanguageQuery = searchTerm
         // Include only point of interest results. This excludes results based on address matches.
-        request.resultTypes = .pointOfInterest
+        //        request.resultTypes = .pointOfInterest
         // Center around NYC
         request.region = MKCoordinateRegion(
             center: CLLocationCoordinate2D(latitude: 40.75251018277572, longitude: -73.97984077693457),
@@ -130,16 +129,19 @@ struct ContentView: View {
             }
             .padding([.horizontal])
             
-            HStack {
-                EmptyView()
-            }.frame(width: UIScreen.main.bounds.size.width, height: 30)
-                .background(Color.gray)
-                .contentShape(Rectangle())
-                .gesture(TapGesture()
+            VStack {
+                Toggle(isOn: $tapped) {
+                    Text("Show Places")
+                }.gesture(TapGesture()
                             .onEnded {
-                    self.tapped.toggle()
+                    print("Checking places")
+                    if places.isEmpty {
+                        getPlaces()
+                    }
                 }
                 )
+                
+            }.padding([.horizontal])
             
             ZStack(alignment: .top) {
                 
