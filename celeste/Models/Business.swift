@@ -33,7 +33,7 @@ class YelpApi: ObservableObject {
         }
         
         var urlRequest = URLRequest(url: url)
-        urlRequest.addValue("Bearer " + "qagBspzDirZ3aSQ1e_T4pLSmFx4Y1xeWql9skdI8up2R3JczCXFxWwLOcECGKrscFv0ZLfgQfk1p3wd0dRJTft5yICI471mwQONSrms8FaiZxIKCGm8D0BJ3di8UYnYx", forHTTPHeaderField: "Authorization")
+        urlRequest.addValue("Bearer " + "", forHTTPHeaderField: "Authorization")
         
         URLSession.shared.dataTask(with: urlRequest) {
             data, response, error in

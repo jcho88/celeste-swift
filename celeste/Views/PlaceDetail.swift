@@ -40,9 +40,15 @@ struct PlaceDetail: View {
                     .font(.title)
                     .padding([.bottom])
                 
-                ForEach(address, id: \.self) { add in
-                    Text(add)
-                }
+                Text(address.joined(separator: "\n"))
+                    .contextMenu {
+                        Button(action: {
+                            UIPasteboard.general.string = address.joined(separator: "\n")
+                        }) {
+                            Text("Copy to clipboard")
+                            Image(systemName: "doc.on.doc")
+                        }
+                     }
                 
                 HStack {
                     Text(place.category)
